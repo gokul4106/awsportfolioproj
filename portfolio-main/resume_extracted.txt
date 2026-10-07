@@ -1,0 +1,99 @@
+Gokul.M
+AWS Solutions Architect / DevOps Engineer
+7604885302 ◇ gokulsrimathi2006@gmail.com ◇ LinkedIn
+2/383 Aishwarya Colony, 1st Street, T-Mannarai, Tiruppur - 641607, Tamil Nadu, India
+Open to Remote ◇ Open to Relocate ◇ Open to On-Site
+SUMMARY
+Final-year Computer Science and Engineering student and aspiring AWS Solutions Architect / DevOps Engineer with
+hands-on experience in AWS cloud services (EC2, S3, IAM, VPC, RDS, CloudFront) and working knowledge of Linux,
+Docker, Kubernetes, Jenkins, and Git. Built and deployed AWS-hosted static websites and full-stack web applications
+using Python, JavaScript, React.js, and Node.js, with internships in cloud computing, web development, and AR/VR.
+Skilled in cloud infrastructure setup, deployment, monitoring, and API integration, with a keen eye for detail, quality, and
+problem-solving. Seeking a Cloud / DevOps role to build scalable, secure, and reliable cloud solutions.
+EXPERIENCE
+Front-End Web Development Trainee (Bootstrap 5.3) Jun '25 — Jul '25
+SBS TECHNOLOGIES PRIVATE LIMITED Erode, India
+AR/VR Development Intern
+UNITY BASED DEVELOPMENT
+Cloud Computing Intern Jun '26 — Jul '26
+Prime Vector Private Limited Hosur, Tamil Nadu, India
+Web Development Intern Jul '26 — Aug '26
+ApexPlanet Software Pvt. Ltd. Gaya, Bihar, India
+EDUCATION
+SSLC, Bharathi Matriculation Higher Sec School (80%) Jul '20 — Apr '21
+Vijayamangalam, Erode, Tamil Nadu, India
+HSC, Govt Boys Hr Sec School (76%) Jun '22 — Apr '23
+Perundurai, Erode, Tamil Nadu, India
+B.E. in COMPUTER SCIENCE AND ENGINEERING, AKSHAYA COLLEGE OF
+ENGINEERING AND TECHNOLOGY (CGPA: 7.56)
+Sep '23 — Present
+Coimbatore, Tamil Nadu, India
+CERTIFICATIONS
+Introduction to Flutter Course, Simplilearn Apr '25
+Bootstrap 5.3 Certification, SBS Technologies Jun '25
+AWS Solutions Architect - Fundamentals of Architecting on AWS, Amazon Web Services (AWS) Jul '26
+Built responsive, mobile-first web pages using HTML5, CSS3, and Bootstrap 5.3 that adapt seamlessly from phone to
+desktop.
+▪
+Applied Bootstrap's grid system and component-based design to write clean, scalable, and reusable code.▪
+Improved UI consistency and accessibility, enhancing how users interact with the page.▪
+Developed Nexiq, an AI-powered chatbot using JavaScript and the Google Gemini API, deployed live on GitHub
+Pages.
+▪
+Developed immersive AR and VR applications using Unity.▪
+Designed interactive 3D environments and implemented core game mechanics.▪
+Explored real-time rendering and immersive technologies.▪
+Gained hands-on experience with AWS services including EC2, S3, IAM, VPC, and RDS through practical cloud
+computing training.
+▪
+Practiced cloud infrastructure setup, deployment, and monitoring in a live project environment.▪
+Collaborated with a technical team to apply cloud concepts to real-world business use cases.▪
+Completed a 45-day Web Development Internship, building 10+ real-world projects using HTML5, CSS3, and
+JavaScript.
+▪
+Developed a personal portfolio website, responsive layouts with Flexbox and CSS Grid, and a contact form with
+JavaScript validation.
+▪
+Built a dynamic To-Do application with localStorage data persistence, an interactive quiz application, and a real-time
+joke generator using the Fetch API.
+▪
+Created a full-stack e-commerce product listing page with filtering and sorting functionality.▪
+Gained hands-on experience in DOM manipulation, responsive design with media queries, RESTful API integration,
+and cross-browser compatibility testing.
+▪
+
+ACHIEVEMENTS
+National Conference Paper Presentation – AI Mock Mate
+K.S. Rangasamy College of Technology Oct '25
+Presented the research paper "AI Mock Mate" at the ICSSR-SRC Sponsored National Conference on Artificial
+Intelligence, showcasing practical applications of AI for sustainable socio-economic development.
+AI Innovators Expo
+Sri Eshwar College of Engineering Oct '25
+Secured Third Place in the AI Innovators Expo at Sri Eshwar THIRAN 2026, showcasing AI-based solutions and
+technical problem-solving in a competitive intercollegiate event.
+UDHAYAM'26
+Kalaignar Karunanidhi Institute of Technology
+Recognized for participating in the Paper Presentation event at UDHAYAM'26, an intercollegiate technical and cultural
+fest conducted by KIT, demonstrating research, presentation, and communication skills.
+PROJECTS
+Nexiq-chatbot, SBS Technologies  Link Jun '25 — Jul '25
+Erode, India
+Developed an AI-powered chatbot using HTML5, CSS3, and JavaScript, integrated with the Google Gemini API
+for real-time responses.
+Implemented file uploads, a dark/light theme toggle, and a glassmorphism UI; deployed live on GitHub Pages.
+AWS - Hosted Static Website, UpSkill Campus  Link Jun '26 — Jun '26
+Cloud-Hosted Personal Portfolio Website
+Developed a responsive static portfolio site and deployed it using Amazon S3 + CloudFront (AWS Free Tier),
+applying IAM least-privilege access, HTTPS enforcement, and CDN-based performance optimization. Managed
+source code with Git/GitHub for version control.
+AI Mock Interview Platform (Mock Mate), personal project Present
+Built a full-stack, AI-powered mock interview preparation platform using React.js, Node.js, TypeScript, and
+Tailwind CSS.
+Implemented an auto-generated certificate of achievement feature with dynamic data and PDF export.
+SKILLS
+Cloud & DevOps AWS (EC2, S3, IAM, VPC, RDS, CloudFront), Cloud Infrastructure Setup & Monitoring,
+Docker, Kubernetes, Jenkins, CI/CD, Linux
+Programming & Web Python, JavaScript, TypeScript, React.js, Node.js, HTML5, CSS3, Bootstrap 5.3, Tailwind CSS,
+RESTful API Integration
+Tools Git, GitHub, Unity (AR/VR Development)
+Languages English, Tamil
