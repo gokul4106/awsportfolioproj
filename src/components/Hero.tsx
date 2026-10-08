@@ -1,6 +1,7 @@
 import React from 'react';
-import { Cloud, ArrowRight, Download, Sparkles, Server, Shield, CheckCircle2, MapPin, Mail, Phone, Award } from 'lucide-react';
+import { ArrowRight, Download, Sparkles, CheckCircle2, MapPin, Mail, Phone } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import profilePhoto from '../assets/profile-photo.jpeg';
 
 interface HeroProps {
   onOpenResume: () => void;
@@ -23,7 +24,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenAiChat }) => {
             {/* AWS Cloud Badge Tag */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100/90 dark:bg-sky-950/80 border border-sky-300/80 dark:border-sky-800/80 text-sky-800 dark:text-sky-300 text-xs font-bold tracking-wide shadow-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block" />
-              <span>AWS Cloud Practitioner & Full-Stack Developer</span>
+              <span>Aspiring AWS Solutions Architect & DevOps Engineer</span>
             </div>
 
             {/* Headline */}
@@ -32,13 +33,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenAiChat }) => {
                 Hi, I'm <span className="bg-gradient-to-r from-sky-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent">Gokul M</span>
               </h1>
               <p className="text-xl sm:text-2xl font-bold text-slate-700 dark:text-slate-300">
-                Software Engineer <span className="text-sky-500">|</span> Cloud Computing (AWS) Enthusiast
+                {PERSONAL_INFO.headline}
               </p>
             </div>
 
             {/* Concise Bio */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
-              Final-year Computer Science Engineering student with hands-on experience in AWS cloud services (EC2, S3, IAM, VPC, RDS), modern React web apps, and quality/testing fundamentals. Currently interning at <strong className="text-slate-900 dark:text-white font-semibold">Prime Vector</strong> and passionate about scalable cloud infrastructure.
+              {PERSONAL_INFO.summary}
             </p>
 
             {/* Availability Badges */}
@@ -104,80 +105,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenAiChat }) => {
 
           </div>
 
-          {/* Right Column - Interactive AWS Cloud Architecture Snippet Card */}
-          <div className="lg:col-span-5">
-            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl border border-slate-800 shadow-2xl relative overflow-hidden group">
-              {/* Decorative top bar */}
-              <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800 text-xs">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="ml-2 font-mono text-slate-400">gokul-aws-infrastructure.yml</span>
+          {/* Profile Photo */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md">
+              <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-sky-400/30 via-indigo-500/20 to-violet-500/30 blur-xl" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/60 dark:border-slate-700 bg-slate-200 dark:bg-slate-800 shadow-2xl">
+                <img
+                  src={profilePhoto}
+                  alt="Portrait of Gokul M"
+                  className="h-full w-full object-cover object-[center_20%]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/10" />
+                <div className="absolute left-4 top-4 rounded-full border border-white/30 bg-slate-950/55 px-3.5 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur-md">
+                  AWS Cloud &amp; DevOps
                 </div>
-                <span className="px-2 py-0.5 rounded bg-sky-950 text-sky-400 font-mono text-[10px] font-bold">
-                  LIVE AWS LAB
-                </span>
-              </div>
-
-              {/* AWS Service Grid */}
-              <div className="space-y-4 text-xs font-mono">
-                <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <Server className="w-4 h-4 text-sky-400" />
-                    <div>
-                      <p className="font-bold text-slate-200">AWS EC2 / VPC Subnet</p>
-                      <p className="text-[10px] text-slate-400">Compute & Isolated Network</p>
-                    </div>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px]">
-                    ● Active
-                  </span>
+                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-200">Computer Science Engineer</p>
+                  <p className="mt-1 text-2xl font-extrabold tracking-tight">Gokul M</p>
+                  <p className="mt-1 text-sm text-slate-200">Building secure, reliable cloud solutions</p>
                 </div>
-
-                <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <Cloud className="w-4 h-4 text-amber-400" />
-                    <div>
-                      <p className="font-bold text-slate-200">AWS S3 + CloudFront CDN</p>
-                      <p className="text-[10px] text-slate-400">Static Storage & Global Edge</p>
-                    </div>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px]">
-                    ● Sub-100ms
-                  </span>
-                </div>
-
-                <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <Shield className="w-4 h-4 text-indigo-400" />
-                    <div>
-                      <p className="font-bold text-slate-200">AWS IAM & RDS Security</p>
-                      <p className="text-[10px] text-slate-400">Role-Based Policy & Database</p>
-                    </div>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-800 text-[10px]">
-                    Encrypted
-                  </span>
-                </div>
-              </div>
-
-              {/* Quick Resume Highlights */}
-              <div className="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-                <div>
-                  <span className="text-slate-400">B.E. CSE Grade:</span>
-                  <span className="ml-1.5 font-bold text-white bg-slate-800 px-2 py-0.5 rounded">7.56 CGPA</span>
-                </div>
-                <div>
-                  <span className="text-slate-400">Target Role:</span>
-                  <span className="ml-1.5 font-bold text-sky-400">Amazon QA & AWS</span>
-                </div>
-              </div>
-
-              {/* Award Ribbon */}
-              <div className="mt-4 p-2.5 rounded-xl bg-sky-950/80 border border-sky-800/80 flex items-center gap-2 text-xs text-sky-300">
-                <Award className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                <span className="truncate">3rd Place Winner @ Sri Eshwar THIRAN 2026 AI Expo</span>
               </div>
             </div>
           </div>

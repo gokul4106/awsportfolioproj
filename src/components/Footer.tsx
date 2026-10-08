@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Software Engineer & Cloud Computing (AWS) Enthusiast based in Tiruppur, Tamil Nadu, India. Passionate about cloud architecture, web technologies, and quality validation.
+              Aspiring AWS Solutions Architect / DevOps Engineer based in Tiruppur, Tamil Nadu, India, with experience in AWS, web development, and AR/VR.
             </p>
 
             <div className="flex items-center gap-3 text-xs text-slate-400">
@@ -50,15 +50,17 @@ export const Footer: React.FC = () => {
               >
                 <Github className="w-4 h-4" />
               </a>
-              <a
-                href={PERSONAL_INFO.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors"
-                title="LinkedIn Profile"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
+              {PERSONAL_INFO.linkedin && (
+                <a
+                  href={PERSONAL_INFO.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors"
+                  title="LinkedIn Profile"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              )}
             </div>
           </div>
 
@@ -72,7 +74,7 @@ export const Footer: React.FC = () => {
               <a href="#experience" className="hover:text-sky-400 transition-colors">Work Experience</a>
               <a href="#projects" className="hover:text-sky-400 transition-colors">Projects & Demos</a>
               <a href="#skills" className="hover:text-sky-400 transition-colors">Skills Matrix</a>
-              <a href="#education" className="hover:text-sky-400 transition-colors">Education & Certs</a>
+              <a href="#education" className="hover:text-sky-400 transition-colors">Education & Awards</a>
               <a href="#contact" className="hover:text-sky-400 transition-colors">Contact Form</a>
             </div>
           </div>

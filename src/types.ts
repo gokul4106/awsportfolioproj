@@ -49,7 +49,7 @@ export interface Project {
   description: string[];
   techStack: string[];
   highlights: string[];
-  demoType: 'mockmate' | 'nexiq' | 'aws' | 'lamp';
+  demoType: 'mockmate' | 'nexiq' | 'aws';
   featured?: boolean;
   githubUrl?: string;
   liveUrl?: string;
@@ -60,7 +60,6 @@ export interface SkillCategory {
   iconName: string;
   skills: {
     name: string;
-    level: number; // percentage
     highlight?: boolean;
   }[];
 }

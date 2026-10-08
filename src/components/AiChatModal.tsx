@@ -13,7 +13,7 @@ export const AiChatModal: React.FC<AiChatModalProps> = ({ onClose }) => {
       id: 'welcome',
       role: 'assistant',
       content:
-        "Hello! I am Gokul M's AI Portfolio Assistant. Ask me anything about Gokul's AWS cloud internship, React projects, certifications, or work availability!",
+        "Hello! I am Gokul M's AI Portfolio Assistant. Ask me about his AWS and DevOps skills, internships, projects, certifications, or availability.",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -76,11 +76,11 @@ export const AiChatModal: React.FC<AiChatModalProps> = ({ onClose }) => {
     } catch (err) {
       console.error('Chat error:', err);
       // Fallback response generator
-      let fallbackText = "Gokul M is a Software Engineer and Cloud Computing Enthusiast specializing in AWS services (EC2, S3, IAM, VPC, RDS), React, Node.js, and quality testing. Feel free to contact him at gokulsrimathi2006@gmail.com or +91 7604885302!";
+      let fallbackText = "Gokul M is a final-year Computer Science and Engineering student aspiring to become an AWS Solutions Architect / DevOps Engineer. He has experience with AWS, web development, and AR/VR. Contact him at gokulsrimathi2006@gmail.com or +91 7604885302.";
       if (text.toLowerCase().includes('aws') || text.toLowerCase().includes('cloud')) {
-        fallbackText = "Gokul M is currently a Cloud Computing Intern at Prime Vector working hands-on with AWS EC2, S3, IAM, VPC, and RDS. He also built an AWS-Hosted Static Website deployed via Amazon S3 & CloudFront CDN!";
+        fallbackText = "Gokul completed a Cloud Computing internship at Prime Vector Private Limited, working with EC2, S3, IAM, VPC, and RDS. His skills also include CloudFront, cloud infrastructure setup, and monitoring.";
       } else if (text.toLowerCase().includes('project') || text.toLowerCase().includes('built')) {
-        fallbackText = "Gokul M built 4 major projects: 1) AI Mock Interview Platform (Mock Mate) with auto certificate export; 2) Nexiq Chatbot using Gemini API; 3) AWS-Hosted Static Website with S3/CloudFront; 4) Smart Sensor Lamp using C++ & Arduino IDE.";
+        fallbackText = "Gokul's résumé highlights three projects: Nexiq Chatbot, an AI Mock Interview Platform (Mock Mate), and a Cloud-Hosted Personal Portfolio Website. His web development internship also included 10+ real-world projects.";
       }
 
       setMessages((prev) => [

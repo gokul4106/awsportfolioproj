@@ -15,10 +15,7 @@ import {
   Download,
   Send,
   Sliders,
-  Zap,
-  Activity,
   X,
-  RefreshCw,
 } from 'lucide-react';
 
 export const Projects: React.FC = () => {
@@ -44,7 +41,7 @@ export const Projects: React.FC = () => {
             Featured Projects & Interactive Demos
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Explore Gokul M's hands-on work across Cloud Computing, AI Applications, Full-Stack Web Development, and Embedded IoT Hardware.
+            Explore projects in AI, AWS cloud hosting, and web development.
           </p>
         </div>
 
@@ -52,9 +49,9 @@ export const Projects: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {[
             { id: 'all', label: 'All Projects' },
-            { id: 'ai', label: 'AI & Machine Learning' },
-            { id: 'cloud', label: 'AWS & Cloud Infrastructure' },
-            { id: 'hardware', label: 'IoT & Hardware' },
+            { id: 'ai', label: 'AI Applications' },
+            { id: 'cloud', label: 'AWS & Cloud' },
+            { id: 'web', label: 'Web Development' },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -193,7 +190,7 @@ const InteractiveDemoModal: React.FC<{ project: Project; onClose: () => void }> 
             </div>
             <div>
               <h3 className="font-extrabold text-sm">{project.title}</h3>
-              <p className="text-[11px] text-slate-400">Interactive Simulation & Live Preview</p>
+              <p className="text-[11px] text-slate-400">Interactive project simulation</p>
             </div>
           </div>
 
@@ -210,7 +207,6 @@ const InteractiveDemoModal: React.FC<{ project: Project; onClose: () => void }> 
           {project.demoType === 'mockmate' && <MockMateDemo />}
           {project.demoType === 'nexiq' && <NexiqChatbotDemo />}
           {project.demoType === 'aws' && <AwsCloudDemo />}
-          {project.demoType === 'lamp' && <SmartLampDemo />}
         </div>
 
         {/* Modal Footer */}
@@ -277,14 +273,14 @@ const MockMateDemo: React.FC = () => {
           <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/80 space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-emerald-800 dark:text-emerald-300">
-                ✅ AI Evaluation Score: 94 / 100
+                Sample AI feedback (simulation)
               </span>
               <span className="px-2 py-0.5 rounded bg-emerald-200 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-200 text-[10px] font-bold">
-                PASSED
+                DEMO
               </span>
             </div>
             <p className="text-xs text-slate-700 dark:text-slate-300">
-              <strong className="font-semibold">AI Feedback:</strong> Excellent breakdown! You correctly identified S3 as object storage ideal for static assets, and EC2/EBS for block storage needed by running operating systems.
+              <strong className="font-semibold">Sample feedback:</strong> This preview demonstrates how interview feedback could appear. The live project can provide its own AI-generated results.
             </p>
           </div>
 
@@ -294,7 +290,7 @@ const MockMateDemo: React.FC = () => {
               className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm flex items-center gap-1.5"
             >
               <FileText className="w-3.5 h-3.5" />
-              Generate Certificate of Completion
+              Preview Certificate Feature
             </button>
             <button
               onClick={() => {
@@ -317,13 +313,13 @@ const MockMateDemo: React.FC = () => {
             <Award className="w-6 h-6" />
           </div>
           <h4 className="font-extrabold text-slate-900 dark:text-white text-base">
-            CERTIFICATE OF ACHIEVEMENT
+            CERTIFICATE PREVIEW
           </h4>
           <p className="text-xs text-slate-600 dark:text-slate-300">
-            This verifies that <strong className="font-bold text-slate-900 dark:text-white">Gokul M (Portfolio Candidate)</strong> successfully passed the AI Technical Interview on AWS Cloud Fundamentals.
+            Sample certificate showing the dynamic achievement certificate feature described in the project.
           </p>
           <div className="text-[10px] font-mono text-slate-500 dark:text-slate-400">
-            Verification ID: MOCK-MATE-AWS-2026-88912 | Issuer: Mock Mate AI Platform
+            Example only — not a verified credential
           </div>
         </div>
       )}
@@ -399,16 +395,10 @@ const NexiqChatbotDemo: React.FC = () => {
 
 // 3. AWS Cloud Simulator Demo
 const AwsCloudDemo: React.FC = () => {
-  const [latency, setLatency] = useState(24);
   const [cached, setCached] = useState(true);
-
-  const testLatency = () => {
-    setLatency(Math.floor(Math.random() * 15) + 18);
-  };
 
   const toggleCache = () => {
     setCached(!cached);
-    setLatency(cached ? 180 : 24);
   };
 
   return (
@@ -416,7 +406,7 @@ const AwsCloudDemo: React.FC = () => {
       <div className="p-4 rounded-xl bg-slate-900 text-slate-100 border border-slate-800 font-mono text-xs space-y-3">
         <div className="flex items-center justify-between border-b border-slate-800 pb-2">
           <span className="font-bold text-amber-400">AWS S3 + CloudFront Distribution</span>
-          <span className="text-[10px] text-emerald-400">● SSL Active (TLS 1.3)</span>
+          <span className="text-[10px] text-slate-400">Illustrative request flow</span>
         </div>
 
         <div className="grid grid-cols-3 gap-2 text-center text-[11px]">
@@ -427,7 +417,7 @@ const AwsCloudDemo: React.FC = () => {
           <div className="p-2 rounded bg-slate-800 border border-slate-700">
             <span className="block text-slate-400">CDN Cache</span>
             <span className={`font-bold ${cached ? 'text-emerald-400' : 'text-rose-400'}`}>
-              {cached ? 'HIT (200 OK)' : 'MISS (Origin Fetch)'}
+              {cached ? 'SIMULATED HIT' : 'SIMULATED MISS'}
             </span>
           </div>
           <div className="p-2 rounded bg-slate-800 border border-slate-700">
@@ -437,92 +427,18 @@ const AwsCloudDemo: React.FC = () => {
         </div>
 
         <div className="pt-2 flex items-center justify-between text-xs">
-          <span>Measured Latency: <strong className="text-emerald-400">{latency} ms</strong></span>
-          <span>Global Edges: <strong className="text-sky-400">450+ Points</strong></span>
+          <span>Access: <strong className="text-emerald-400">Least privilege</strong></span>
+          <span>Delivery: <strong className="text-sky-400">HTTPS</strong></span>
         </div>
       </div>
 
       <div className="flex gap-2">
         <button
-          onClick={testLatency}
-          className="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-sky-600 hover:bg-sky-700 flex items-center gap-1.5"
-        >
-          <RefreshCw className="w-3.5 h-3.5" />
-          Test Request Latency
-        </button>
-        <button
           onClick={toggleCache}
           className="px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300"
         >
-          {cached ? 'Purge CDN Cache (Origin Fetch)' : 'Enable Edge Cache (24ms)'}
+          {cached ? 'Simulate cache miss' : 'Simulate cache hit'}
         </button>
-      </div>
-    </div>
-  );
-};
-
-// 4. Smart Lamp Simulator Demo
-const SmartLampDemo: React.FC = () => {
-  const [ambientLight, setAmbientLight] = useState(25); // 0 to 100
-  const [motionDetected, setMotionDetected] = useState(true);
-
-  // Calculate lamp brightness: if no motion, 0%; else inverse of ambient light
-  const lampBrightness = motionDetected ? Math.max(0, 100 - ambientLight) : 0;
-
-  return (
-    <div className="space-y-5 text-left">
-      {/* Visual Lamp Preview */}
-      <div className="p-6 rounded-2xl bg-slate-950 text-white border border-slate-800 flex flex-col items-center justify-center space-y-3 relative overflow-hidden">
-        <div
-          className="w-20 h-20 rounded-full transition-all duration-500 flex items-center justify-center shadow-2xl"
-          style={{
-            backgroundColor: `rgba(251, 191, 36, ${lampBrightness / 100})`,
-            boxShadow: `0 0 ${lampBrightness / 2}px rgba(251, 191, 36, ${lampBrightness / 100})`,
-          }}
-        >
-          <Zap className={`w-8 h-8 ${lampBrightness > 20 ? 'text-slate-900' : 'text-amber-500'}`} />
-        </div>
-
-        <div className="text-center">
-          <h4 className="font-extrabold text-sm text-slate-100">Smart Sensor Lamp Status</h4>
-          <p className="text-xs text-slate-400">
-            Output Brightness: <strong className="text-amber-400">{lampBrightness}%</strong> | Power Usage: <strong className="text-emerald-400">{(lampBrightness * 0.12).toFixed(1)}W</strong>
-          </p>
-        </div>
-      </div>
-
-      {/* Interactive Controls */}
-      <div className="space-y-4">
-        <div>
-          <div className="flex justify-between text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-            <span>Ambient Room Light Sensor (LDR)</span>
-            <span>{ambientLight}% ({ambientLight > 60 ? 'Bright Daylight' : 'Dim Room'})</span>
-          </div>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value={ambientLight}
-            onChange={(e) => setAmbientLight(Number(e.target.value))}
-            className="w-full accent-amber-500"
-          />
-        </div>
-
-        <div className="flex items-center justify-between p-3 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-          <span className="text-xs font-semibold text-slate-700 dark:text-slate-200">
-            PIR Motion Sensor Trigger
-          </span>
-          <button
-            onClick={() => setMotionDetected(!motionDetected)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
-              motionDetected
-                ? 'bg-emerald-600 text-white'
-                : 'bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
-            }`}
-          >
-            {motionDetected ? '● Motion Detected' : 'Idle (No Motion)'}
-          </button>
-        </div>
       </div>
     </div>
   );

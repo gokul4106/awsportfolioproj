@@ -55,10 +55,10 @@ export const Contact: React.FC = () => {
             GET IN TOUCH
           </h2>
           <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">
-            Let's Connect for Cloud & Software Opportunities
+            Let's Connect for Cloud, DevOps & Software Opportunities
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Open for Remote, Relocation, and On-Site engineering roles across India and worldwide.
+            Open to remote, relocation, and on-site opportunities.
           </p>
         </div>
 

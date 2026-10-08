@@ -1,21 +1,21 @@
 import React from 'react';
-import { Target, Cpu, Cloud, Award, CheckCircle2, Terminal, Code2, BookOpen } from 'lucide-react';
+import { Target, Cloud, CheckCircle2, Terminal, Code2, Briefcase, Server, Layers } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const About: React.FC = () => {
   const stats = [
-    { label: 'Core Projects Built', value: '4+', sub: 'AI, AWS, IoT & Web Apps', icon: Code2, color: 'text-sky-500' },
-    { label: 'AWS & Web Certs', value: '3', sub: 'Solutions Architect & Web', icon: Cloud, color: 'text-indigo-500' },
-    { label: 'Conference Awards', value: '3', sub: 'National Research & Expo', icon: Award, color: 'text-amber-500' },
-    { label: 'CSE CGPA', value: '7.56', sub: 'Expected Graduation 2026', icon: BookOpen, color: 'text-emerald-500' },
+    { label: 'Web Projects', value: '10+', sub: 'Built during web development internship', icon: Code2, color: 'text-sky-500' },
+    { label: 'Internships', value: '4', sub: 'Cloud, web & AR/VR', icon: Briefcase, color: 'text-indigo-500' },
+    { label: 'AWS Services', value: '6', sub: 'EC2, S3, IAM, VPC, RDS & CloudFront', icon: Server, color: 'text-amber-500' },
+    { label: 'Featured Projects', value: '3', sub: 'AI, cloud hosting & web', icon: Layers, color: 'text-emerald-500' },
   ];
 
   const highlights = [
-    'Hands-on experience with AWS EC2, S3, IAM, VPC, and RDS cloud infrastructure.',
-    'Strong foundation in Linux terminal environments, shell scripts, and Python development.',
-    'Proven track record in building full-stack web applications with React.js, Node.js, and Tailwind CSS.',
-    'Experience with AI integrations using Google Gemini API and automated candidate evaluation engines.',
-    'Keen eye for detail, software quality assurance, UI accessibility, and systematic bug testing.'
+    'Hands-on experience with AWS EC2, S3, IAM, VPC, RDS, and CloudFront.',
+    'Working knowledge of Linux, Docker, Kubernetes, Jenkins, Git, and CI/CD.',
+    'Built responsive websites and full-stack applications with React.js, Node.js, and TypeScript.',
+    'Integrated the Google Gemini API into an AI-powered chatbot.',
+    'Built web projects with responsive layouts, API integration, and cross-browser testing.'
   ];
 
   return (
@@ -28,7 +28,7 @@ export const About: React.FC = () => {
             ABOUT GOKUL M
           </h2>
           <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Bridging Cloud Computing, Full-Stack Engineering & Quality Validation
+            Building cloud, DevOps, and web development skills
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export const About: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-lg">Background & Passion</h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Computer Science & Engineering Student @ Akshaya College</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">Final-year Computer Science and Engineering student</p>
               </div>
             </div>
 
@@ -97,7 +97,7 @@ export const About: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-base">Career Objective</h3>
-                  <p className="text-xs text-sky-400">Amazon & AWS Quality Services</p>
+                  <p className="text-xs text-sky-400">AWS Solutions Architecture & DevOps</p>
                 </div>
               </div>
 
@@ -108,11 +108,11 @@ export const About: React.FC = () => {
               <div className="pt-3 border-t border-slate-800/80 space-y-2.5 text-xs">
                 <div className="flex justify-between text-slate-300">
                   <span>Target Domain:</span>
-                  <span className="font-semibold text-sky-300">AWS Cloud & Quality Services</span>
+                  <span className="font-semibold text-sky-300">AWS Cloud & DevOps</span>
                 </div>
                 <div className="flex justify-between text-slate-300">
                   <span>Focus Areas:</span>
-                  <span className="font-semibold text-emerald-300">Device Testing, Retail & AWS</span>
+                  <span className="font-semibold text-emerald-300">Cloud infrastructure & deployment</span>
                 </div>
                 <div className="flex justify-between text-slate-300">
                   <span>Relocation:</span>
@@ -127,7 +127,7 @@ export const About: React.FC = () => {
                 Core Tech Stack
               </h4>
               <div className="flex flex-wrap gap-1.5">
-                {['AWS EC2', 'AWS S3', 'VPC', 'RDS', 'IAM', 'Python', 'C++', 'Linux', 'React.js', 'Node.js', 'Tailwind CSS', 'Bootstrap 5.3', 'Git'].map((tech) => (
+                {['AWS EC2', 'AWS S3', 'IAM', 'VPC', 'RDS', 'CloudFront', 'Docker', 'Kubernetes', 'Jenkins', 'Linux', 'Python', 'JavaScript', 'TypeScript', 'React.js', 'Node.js', 'Tailwind CSS', 'Bootstrap 5.3', 'Git'].map((tech) => (
                   <span
                     key={tech}
                     className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200"

@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Education', href: '#education' },
+    { name: 'Education & Awards', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -58,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 GOKUL M
               </span>
               <span className="text-[10px] tracking-wider uppercase font-semibold text-sky-500 dark:text-sky-400 flex items-center gap-1">
-                <Terminal className="w-3 h-3 inline" /> AWS & Cloud Dev
+                <Terminal className="w-3 h-3 inline" /> AWS & DevOps
               </span>
             </div>
           </a>

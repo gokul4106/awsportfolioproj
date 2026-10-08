@@ -2,289 +2,279 @@ import { Experience, Education, Certification, Achievement, Project, SkillCatego
 
 export const PERSONAL_INFO = {
   name: 'Gokul M',
-  headline: 'Software Engineer | Cloud Computing (AWS) Enthusiast',
+  headline: 'Aspiring AWS Solutions Architect / DevOps Engineer',
   phone: '7604885302',
   phoneFormatted: '+91 7604885302',
   email: 'gokulsrimathi2006@gmail.com',
   location: 'Tiruppur, Tamil Nadu, India',
   availability: ['Open to Remote', 'Open to Relocate', 'Open to On-Site'],
-  targetGoal: "Eager to contribute to Amazon's Quality Services organization by supporting testing and validation of Devices, Retail, and AWS products.",
-  summary: `Final-year Computer Science and Engineering student with hands-on experience in AWS cloud services, web development, and quality/testing fundamentals. Currently pursuing an ongoing Cloud Computing internship, with prior experience building AWS-hosted static websites and full-stack applications. Strong foundation in Linux environments, Python, and web technologies, with a keen eye for detail, quality, and problem-solving.`,
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
+  targetGoal: 'Seeking a Cloud / DevOps role to build scalable, secure, and reliable cloud solutions.',
+  summary: 'Final-year Computer Science and Engineering student and aspiring AWS Solutions Architect / DevOps Engineer with hands-on experience in AWS cloud services (EC2, S3, IAM, VPC, RDS, CloudFront) and working knowledge of Linux, Docker, Kubernetes, Jenkins, and Git. Built and deployed AWS-hosted static websites and full-stack web applications using Python, JavaScript, React.js, and Node.js, with internships in cloud computing, web development, and AR/VR. Skilled in cloud infrastructure setup, deployment, monitoring, and API integration, with a keen eye for detail, quality, and problem-solving.',
+  github: 'https://github.com/gokul4106',
+  linkedin: '',
 };
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: 'exp-1',
-    role: 'Cloud Computing Intern',
-    company: 'Prime Vector',
-    location: 'Hosur, India',
-    period: "Jul '26 — Present",
-    status: 'Ongoing',
-    type: 'cloud',
+    id: 'exp-apexplanet',
+    role: 'Web Development Intern',
+    company: 'ApexPlanet Software Pvt. Ltd.',
+    location: 'Gaya, Bihar, India',
+    period: "Jul '26 — Aug '26",
+    type: 'web',
     description: [
-      'Currently undergoing hands-on training in cloud computing fundamentals, working with core AWS services including EC2, S3, IAM, VPC, and RDS.',
-      'Gaining practical exposure to cloud infrastructure setup, deployment, and monitoring in a live project environment.',
-      'Collaborating with a technical team to apply cloud concepts to real-world business use cases.'
+      'Completed a 45-day web development internship, building 10+ real-world projects using HTML5, CSS3, and JavaScript.',
+      'Developed a personal portfolio website with responsive layouts using Flexbox and CSS Grid, plus a contact form with JavaScript validation.',
+      'Built a dynamic To-Do app with localStorage, an interactive quiz, a real-time joke generator using the Fetch API, and a full-stack e-commerce product listing page with filtering and sorting.',
+      'Practiced DOM manipulation, responsive design, REST API integration, and cross-browser compatibility testing.'
     ],
-    skills: ['AWS EC2', 'AWS S3', 'IAM', 'VPC', 'RDS', 'Linux', 'Cloud Infrastructure']
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'Flexbox', 'CSS Grid', 'DOM', 'Fetch API', 'REST APIs']
   },
   {
-    id: 'exp-2',
-    role: 'Web Development Intern',
+    id: 'exp-cloud',
+    role: 'Cloud Computing Intern',
+    company: 'Prime Vector Private Limited',
+    location: 'Hosur, Tamil Nadu, India',
+    period: "Jun '26 — Jul '26",
+    type: 'cloud',
+    description: [
+      'Gained hands-on experience with AWS EC2, S3, IAM, VPC, and RDS through practical cloud computing training.',
+      'Practiced cloud infrastructure setup, deployment, and monitoring in a live project environment.',
+      'Collaborated with a technical team to apply cloud concepts to real-world business use cases.'
+    ],
+    skills: ['AWS EC2', 'AWS S3', 'IAM', 'VPC', 'RDS', 'Cloud Infrastructure']
+  },
+  {
+    id: 'exp-arvr',
+    role: 'AR/VR Development Intern',
+    company: 'Unity Based Development',
+    location: 'Location not listed',
+    period: 'Dates not listed',
+    type: 'arvr',
+    description: [
+      'Developed immersive augmented and virtual reality applications using Unity.',
+      'Designed interactive 3D environments and implemented core game mechanics.',
+      'Explored real-time rendering and immersive technologies.'
+    ],
+    skills: ['Unity', 'AR/VR', '3D Environments', 'Game Mechanics', 'Real-Time Rendering']
+  },
+  {
+    id: 'exp-sbs',
+    role: 'Front-End Web Development Trainee (Bootstrap 5.3)',
     company: 'SBS Technologies Private Limited',
-    location: 'Tamil Nadu, India',
+    location: 'Erode, India',
     period: "Jun '25 — Jul '25",
     type: 'web',
     description: [
-      'Worked hands-on with HTML5, CSS3, and Bootstrap 5.3 to build responsive web pages across all screen sizes.',
-      'Focused on mobile-first design, ensuring layouts adapt smoothly from phone to desktop.',
-      'Paid close attention to UI consistency and accessibility, improving overall user interaction quality.',
-      'Gained practical experience with component-based design and Bootstrap grid system to write clean, scalable code.'
+      'Built responsive, mobile-first web pages using HTML5, CSS3, and Bootstrap 5.3.',
+      'Applied Bootstrap’s grid system and component-based design to write clean, scalable, reusable code.',
+      'Improved UI consistency and accessibility, enhancing how users interact with the page.',
+      'Developed Nexiq, an AI-powered chatbot using JavaScript and the Google Gemini API, deployed on GitHub Pages.'
     ],
-    skills: ['HTML5', 'CSS3', 'Bootstrap 5.3', 'JavaScript', 'Responsive Design', 'Mobile-First UI']
-  },
-  {
-    id: 'exp-3',
-    role: 'AR/VR Development Intern',
-    company: 'Unity Based Development',
-    location: 'Remote / Project-based',
-    period: 'Internship Project',
-    type: 'arvr',
-    description: [
-      'Developed immersive AR and VR applications using Unity engine.',
-      'Designed interactive 3D environments and implemented game mechanics.',
-      'Explored real-time rendering and immersive technologies for interactive user experiences.'
-    ],
-    skills: ['Unity 3D', 'C#', 'AR/VR', 'Real-Time Rendering', '3D Environments']
+    skills: ['HTML5', 'CSS3', 'Bootstrap 5.3', 'JavaScript', 'Google Gemini API', 'Responsive Design']
   }
 ];
 
 export const EDUCATION_DATA: Education[] = [
   {
-    id: 'edu-1',
-    degree: 'B.E., Computer Science and Engineering',
+    id: 'edu-be',
+    degree: 'B.E. in Computer Science and Engineering',
     institution: 'Akshaya College of Engineering and Technology',
-    period: 'Expected 2026',
+    period: "Sep '23 — Present",
     grade: 'CGPA: 7.56',
-    details: 'Focus on Cloud Computing, Web Technologies, Operating Systems, Software Engineering, and Database Management.'
+    details: 'Coimbatore, Tamil Nadu, India'
   },
   {
-    id: 'edu-2',
-    degree: 'HSC (Higher Secondary Certificate)',
-    institution: 'Govt. Boys Higher Secondary School',
+    id: 'edu-hsc',
+    degree: 'HSC',
+    institution: 'Govt Boys Higher Secondary School',
     period: "Jun '22 — Apr '23",
-    grade: 'GPA: 76%',
-    details: 'Mathematics, Physics, Chemistry, Computer Science stream.'
+    grade: '76%',
+    details: 'Perundurai, Erode, Tamil Nadu, India'
   },
   {
-    id: 'edu-3',
-    degree: 'SSLC (Secondary School Leaving Certificate)',
+    id: 'edu-sslc',
+    degree: 'SSLC',
     institution: 'Bharathi Matriculation Higher Secondary School',
     period: "Jul '20 — Apr '21",
-    grade: 'GPA: 80%',
-    details: 'Secondary Education with strong foundations in Science and Mathematics.'
+    grade: '80%',
+    details: 'Vijayamangalam, Erode, Tamil Nadu, India'
   }
 ];
 
 export const CERTIFICATIONS_DATA: Certification[] = [
   {
-    id: 'cert-1',
-    title: 'AWS Solutions Architect – Fundamentals of Architecting on AWS',
-    issuer: 'Amazon Web Services (AWS)',
-    date: "Jul '26",
-    badge: 'AWS Certified Architectural Fundamentals',
-    skills: ['EC2', 'S3', 'VPC', 'Cloud Security', 'Scalability']
+    id: 'cert-flutter',
+    title: 'Introduction to Flutter Course',
+    issuer: 'Simplilearn',
+    date: "Apr '25",
+    badge: 'Course Completion',
+    skills: ['Flutter']
   },
   {
-    id: 'cert-2',
-    title: 'Bootstrap 5.3 Responsive Web Development',
+    id: 'cert-bootstrap',
+    title: 'Bootstrap 5.3 Certification',
     issuer: 'SBS Technologies',
     date: "Jun '25",
-    badge: 'UI/UX Web Specialist',
-    skills: ['Bootstrap 5.3', 'Responsive Layouts', 'CSS Utilities']
+    badge: 'Certification',
+    skills: ['Bootstrap 5.3', 'Responsive Web Design']
   },
   {
-    id: 'cert-3',
-    title: 'Introduction to Flutter App Development',
-    issuer: 'Simply Learning',
-    date: "Apr '25",
-    badge: 'Mobile App Developer',
-    skills: ['Flutter', 'Dart', 'Cross-Platform UI']
+    id: 'cert-aws',
+    title: 'AWS Solutions Architect - Fundamentals of Architecting on AWS',
+    issuer: 'Amazon Web Services (AWS)',
+    date: "Jul '26",
+    badge: 'Course Completion',
+    skills: ['AWS', 'Cloud Architecture']
   }
 ];
 
 export const ACHIEVEMENTS_DATA: Achievement[] = [
   {
-    id: 'ach-1',
-    title: 'National Conference Paper Presentation — "AI Mock Mate"',
+    id: 'ach-mockmate',
+    title: 'National Conference Paper Presentation — AI Mock Mate',
     event: 'ICSSR-SRC Sponsored National Conference on Artificial Intelligence',
     organization: 'K.S. Rangasamy College of Technology',
     date: "Oct '25",
-    award: 'Published Research Presenter',
-    description: 'Presented the research paper "AI Mock Mate" showcasing innovative AI applications for sustainable socio-economic development and automated candidate interview preparation.'
+    award: 'Paper Presenter',
+    description: 'Presented the research paper “AI Mock Mate,” showcasing practical AI applications for sustainable socio-economic development.'
   },
   {
-    id: 'ach-2',
-    title: 'AI Innovators Expo — Third Place',
+    id: 'ach-thiran',
+    title: 'AI Innovators Expo',
     event: 'Sri Eshwar THIRAN 2026',
     organization: 'Sri Eshwar College of Engineering',
     date: "Oct '25",
-    award: '🏆 Third Place Winner',
-    description: 'Secured Third Place for an innovative AI-based solution, demonstrating strong technical problem-solving abilities in a competitive intercollegiate event.'
+    award: 'Third Place',
+    description: 'Secured third place in the AI Innovators Expo, demonstrating AI-based solutions and technical problem-solving.'
   },
   {
-    id: 'ach-3',
-    title: 'Paper Presentation — UDHAYAM\'26',
-    event: 'Intercollegiate Technical Fest',
+    id: 'ach-udhayam',
+    title: "Paper Presentation — UDHAYAM'26",
+    event: 'Intercollegiate Technical and Cultural Fest',
     organization: 'Kalaignar Karunanidhi Institute of Technology',
     date: '2026',
-    award: 'Recognized Presenter',
-    description: 'Recognized for participation in a Paper Presentation event, demonstrating research, technical presentation, and effective communication skills.'
+    award: 'Presenter',
+    description: 'Recognized for participating in the Paper Presentation event, demonstrating research, presentation, and communication skills.'
   }
 ];
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: 'proj-1',
-    title: 'AI Mock Interview Platform (Mock Mate)',
-    category: 'ai',
-    subtitle: 'Personal Research Project & Award-Winning AI Platform',
-    role: 'Lead Developer',
-    featured: true,
-    description: [
-      'Built an AI-powered mock interview preparation platform using React.js, Node.js, TypeScript, and Tailwind CSS.',
-      'Integrated real-time question generation, candidate speech evaluation, and instant feedback scoring.',
-      'Implemented an auto-generated certificate of achievement feature with dynamic candidate data and instant PDF export.'
-    ],
-    techStack: ['React.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'jsPDF / PDF Export', 'Gemini AI'],
-    highlights: [
-      'National Conference research paper presentation at K.S. Rangasamy College of Technology.',
-      'Auto-generates printable verification certificates upon interview completion.',
-      'Adaptive interview difficulty tailored to candidate experience level.'
-    ],
-    demoType: 'mockmate',
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://mockmate-demo.app'
-  },
-  {
-    id: 'proj-2',
+    id: 'proj-nexiq',
     title: 'Nexiq Chatbot',
     category: 'ai',
-    subtitle: 'SBS Technologies Internship Project',
-    role: 'Full-Stack Developer',
+    subtitle: 'SBS Technologies | Jun 2025 — Jul 2025',
+    role: 'Web Development Project',
     period: "Jun '25 — Jul '25",
     featured: true,
     description: [
-      'Built an AI-powered chatbot using HTML5, CSS3, and JavaScript, integrated directly with the Google Gemini API.',
-      'Implemented real-time responses, file uploads, dark/light theme switching, and a modern glassmorphism UI.',
-      'Deployed live on GitHub Pages with optimized client-side state handling and response streaming.'
+      'Developed an AI-powered chatbot using HTML5, CSS3, and JavaScript, integrated with the Google Gemini API for real-time responses.',
+      'Implemented file uploads, a dark/light theme toggle, and a glassmorphism interface.',
+      'Deployed the chatbot on GitHub Pages.'
     ],
-    techStack: ['Google Gemini API', 'HTML5', 'CSS3', 'JavaScript', 'Glassmorphism UI', 'GitHub Pages'],
+    techStack: ['HTML5', 'CSS3', 'JavaScript', 'Google Gemini API', 'GitHub Pages'],
     highlights: [
-      'Supports file attachment inspection and code snippet formatting.',
-      'Smooth dark/light mode toggle with frosted glass aesthetic.',
-      'Deployed live for public interaction.'
+      'Integrated Google Gemini API for real-time chatbot responses.',
+      'Added file uploads and a dark/light theme toggle.',
+      'Deployed the project on GitHub Pages.'
     ],
-    demoType: 'nexiq',
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://gokul-m.github.io/nexiq-chatbot'
+    demoType: 'nexiq'
   },
   {
-    id: 'proj-3',
-    title: 'AWS-Hosted Static Website',
+    id: 'proj-portfolio',
+    title: 'Cloud-Hosted Personal Portfolio Website',
     category: 'cloud',
-    subtitle: 'UpSkill Campus — Cloud Computing Internship',
-    role: 'Cloud Architect & Administrator',
+    subtitle: 'AWS | UpSkill Campus',
+    role: 'Personal Project',
+    period: "Jun '26",
     featured: true,
     description: [
-      'Designed and deployed a static website using Amazon S3 for durable object storage and Amazon CloudFront for edge content delivery.',
-      'Configured CloudFront distribution, custom SSL/TLS certificates, and bucket security policies for global low-latency access.',
-      'Gained first-hand experience with AWS hosting, distribution, invalidations, and performance optimization.'
+      'Developed a responsive static portfolio website and deployed it using Amazon S3 and CloudFront on the AWS Free Tier.',
+      'Applied least-privilege IAM access, HTTPS enforcement, and CDN-based performance optimization.',
+      'Managed source code with Git and GitHub for version control.'
     ],
-    techStack: ['AWS S3', 'AWS CloudFront', 'AWS IAM', 'Route 53', 'SSL/TLS', 'Performance Tuning'],
+    techStack: ['Amazon S3', 'Amazon CloudFront', 'AWS IAM', 'HTTPS', 'Git', 'GitHub'],
     highlights: [
-      'Global CDN acceleration with sub-100ms loading speeds.',
-      'Automated S3 sync pipeline for zero-downtime updates.',
-      'Secured via CloudFront Origin Access Control (OAC).'
+      'Hosted a responsive static website on Amazon S3 with CloudFront.',
+      'Applied least-privilege access and HTTPS enforcement.',
+      'Used Git and GitHub for source control.'
     ],
-    demoType: 'aws',
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://d111111abcdef8.cloudfront.net'
+    demoType: 'aws'
   },
   {
-    id: 'proj-4',
-    title: 'Smart Sensor Lamp',
-    category: 'hardware',
-    subtitle: 'Personal IoT & Embedded Systems Project',
-    role: 'Embedded Hardware Developer',
-    featured: false,
+    id: 'proj-mockmate',
+    title: 'AI Mock Interview Platform (Mock Mate)',
+    category: 'ai',
+    subtitle: 'Personal Project',
+    role: 'Full-Stack Developer',
+    period: 'Present',
+    featured: true,
     description: [
-      'Designed a smart sensor lamp that automatically adjusts brightness based on ambient light levels and user presence.',
-      'Integrated ambient light (LDR) and motion (PIR) sensors for automatic on/off functionality, significantly improving energy efficiency.',
-      'Built companion control interface in React Native connected to Node.js backend.'
+      'Built a full-stack, AI-powered mock interview preparation platform using React.js, Node.js, TypeScript, and Tailwind CSS.',
+      'Implemented an auto-generated certificate of achievement with dynamic data and PDF export.'
     ],
-    techStack: ['C++', 'Arduino IDE', 'PIR Motion Sensor', 'LDR Light Sensor', 'React Native', 'Node.js'],
+    techStack: ['React.js', 'Node.js', 'TypeScript', 'Tailwind CSS'],
     highlights: [
-      'Energy-saving motion trigger with 10-second idle auto-dim.',
-      'Adaptive ambient light dimming curve.',
-      'Hardware micro-controller integration with C++.'
+      'Full-stack interview preparation platform.',
+      'Generates certificates with dynamic candidate data.',
+      'Exports certificates to PDF.'
     ],
-    demoType: 'lamp',
-    githubUrl: 'https://github.com',
-    liveUrl: '#'
+    demoType: 'mockmate'
   }
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    category: 'Cloud Computing & Infrastructure',
+    category: 'Cloud & DevOps',
     iconName: 'Cloud',
     skills: [
-      { name: 'AWS EC2', level: 88, highlight: true },
-      { name: 'AWS S3', level: 92, highlight: true },
-      { name: 'AWS IAM & VPC', level: 85, highlight: true },
-      { name: 'AWS RDS & CloudFront', level: 82, highlight: true },
-      { name: 'Linux Operating System', level: 90, highlight: true }
+      { name: 'AWS EC2, S3, IAM, VPC, RDS & CloudFront', highlight: true },
+      { name: 'Cloud Infrastructure Setup & Monitoring', highlight: true },
+      { name: 'Docker' },
+      { name: 'Kubernetes' },
+      { name: 'Jenkins' },
+      { name: 'CI/CD' },
+      { name: 'Linux' }
     ]
   },
   {
-    category: 'Web & Mobile Development',
+    category: 'Programming & Web',
     iconName: 'Code',
     skills: [
-      { name: 'React.js & TypeScript', level: 88, highlight: true },
-      { name: 'Node.js & Express', level: 84, highlight: true },
-      { name: 'Tailwind CSS & Bootstrap 5.3', level: 92, highlight: true },
-      { name: 'HTML5 / CSS3 / JavaScript', level: 95, highlight: true },
-      { name: 'Flutter & React Native', level: 75, highlight: false }
+      { name: 'Python' },
+      { name: 'JavaScript' },
+      { name: 'TypeScript' },
+      { name: 'React.js' },
+      { name: 'Node.js' },
+      { name: 'HTML5 & CSS3' },
+      { name: 'Bootstrap 5.3' },
+      { name: 'Tailwind CSS' },
+      { name: 'RESTful API Integration' }
     ]
   },
   {
-    category: 'Programming & Core CS',
-    iconName: 'Terminal',
-    skills: [
-      { name: 'Python', level: 85, highlight: true },
-      { name: 'C & C++', level: 80, highlight: true },
-      { name: 'Data Structures & Algorithms', level: 78, highlight: false },
-      { name: 'REST APIs & JSON', level: 88, highlight: true }
-    ]
-  },
-  {
-    category: 'Tools, Platforms & Testing',
+    category: 'Tools & Platforms',
     iconName: 'Wrench',
     skills: [
-      { name: 'Git & GitHub', level: 90, highlight: true },
-      { name: 'VS Code', level: 95, highlight: true },
-      { name: 'Unity 3D Engine', level: 72, highlight: false },
-      { name: 'Arduino IDE & IoT', level: 78, highlight: false }
+      { name: 'Git' },
+      { name: 'GitHub' },
+      { name: 'Unity (AR/VR Development)' }
+    ]
+  },
+  {
+    category: 'Languages',
+    iconName: 'Terminal',
+    skills: [
+      { name: 'English' },
+      { name: 'Tamil' }
     ]
   }
 ];
 
 export const QUICK_PROMPTS = [
-  "Tell me about Gokul's AWS experience",
-  "What projects has Gokul built?",
-  "What certifications does Gokul hold?",
-  "Is Gokul open for remote or relocation roles?"
+  'Tell me about Gokul’s AWS and DevOps skills',
+  'What projects has Gokul built?',
+  'What internships has Gokul completed?',
+  'What certifications does Gokul hold?'
 ];

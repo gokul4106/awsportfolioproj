@@ -28,10 +28,10 @@ export const Skills: React.FC = () => {
             TECHNICAL PROFICIENCY
           </h2>
           <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-            Cloud, Full-Stack & Tooling Matrix
+            Cloud, DevOps & Web Development
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            A comprehensive overview of Gokul M's technical capabilities, cloud service mastery, and programming competencies.
+            Technologies and tools listed in Gokul's résumé.
           </p>
         </div>
 
@@ -70,27 +70,15 @@ export const Skills: React.FC = () => {
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {filteredSkills.map((skill) => (
-                    <div key={skill.name} className="space-y-1.5">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
-                          {skill.highlight && <CheckCircle2 className="w-3.5 h-3.5 text-sky-500" />}
-                          {skill.name}
-                        </span>
-                        <span className="font-semibold text-slate-500 dark:text-slate-400">
-                          {skill.level}%
-                        </span>
-                      </div>
-
-                      {/* Progress Bar */}
-                      <div className="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden">
-                        <div
-                          className="h-full rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 transition-all duration-500"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
-                    </div>
+                    <span
+                      key={skill.name}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-200"
+                    >
+                      {skill.highlight && <CheckCircle2 className="w-3.5 h-3.5 text-sky-500" />}
+                      {skill.name}
+                    </span>
                   ))}
                 </div>
               </div>

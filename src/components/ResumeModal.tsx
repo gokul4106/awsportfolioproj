@@ -33,8 +33,14 @@ ${EDUCATION_DATA.map(e => `${e.degree} - ${e.institution} (${e.period}) [${e.gra
 CERTIFICATIONS:
 ${CERTIFICATIONS_DATA.map(c => `${c.title} - ${c.issuer} (${c.date})`).join('\n')}
 
+ACHIEVEMENTS:
+${ACHIEVEMENTS_DATA.map(a => `${a.title} - ${a.organization} (${a.date}): ${a.description}`).join('\n')}
+
 PROJECTS:
 ${PROJECTS_DATA.map(p => `${p.title}: ${p.description.join(' ')}`).join('\n\n')}
+
+SKILLS:
+${SKILL_CATEGORIES.map(c => `${c.category}: ${c.skills.map(s => s.name).join(', ')}`).join('\n')}
 `;
     navigator.clipboard.writeText(plainText);
     setCopied(true);

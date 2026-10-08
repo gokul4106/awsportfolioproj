@@ -1,6 +1,6 @@
 {
   "name": "Gokul M - Portfolio",
-  "description": "Professional portfolio website for Gokul M, Software Engineer & Cloud Computing (AWS) Enthusiast with dark mode toggle, interactive project demos, certification view, and contact options.",
+  "description": "Portfolio of Gokul M, an aspiring AWS Solutions Architect and DevOps Engineer, featuring cloud, web development, and AR/VR experience.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
