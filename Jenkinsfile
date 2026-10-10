@@ -1,16 +1,21 @@
 pipeline {
     agent any
 
+    tools {
+        // This links the NodeJS tool you configured in Jenkins
+        nodejs 'node'
+    }
+
     stages {
-        stage('Install dependencies') {
+        stage('Checkout Code') {
             steps {
-                sh 'npm ci'
+                checkout scm
             }
         }
 
-        stage('Type check') {
+        stage('Install dependencies') {
             steps {
-                sh 'npm run lint'
+                sh 'npm install'
             }
         }
 
@@ -18,12 +23,6 @@ pipeline {
             steps {
                 sh 'npm run build'
             }
-        }
-    }
-
-    post {
-        success {
-            archiveArtifacts artifacts: 'dist/**', fingerprint: true
         }
     }
 }
