@@ -33,8 +33,14 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans transition-colors duration-300 selection:bg-sky-500 selection:text-white">
-      {/* Sticky Navigation */}
+    <div className="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans transition-colors duration-300 selection:bg-sky-500 selection:text-white">
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute left-[-10%] top-[-10%] h-72 w-72 rounded-full bg-sky-400/20 blur-3xl dark:bg-sky-500/10" />
+        <div className="absolute right-[-8%] top-[20%] h-80 w-80 rounded-full bg-indigo-500/15 blur-3xl dark:bg-indigo-500/10" />
+        <div className="absolute bottom-[-12%] left-[20%] h-96 w-96 rounded-full bg-violet-500/10 blur-3xl dark:bg-violet-500/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.75),_transparent_40%)] dark:bg-[radial-gradient(circle_at_top,_rgba(14,116,144,0.18),_transparent_38%)]" />
+      </div>
+
       <Navbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
@@ -42,8 +48,7 @@ export default function App() {
         onOpenAiChat={() => setIsAiChatOpen(true)}
       />
 
-      {/* Main Content Sections */}
-      <main>
+      <main className="relative">
         <Hero
           onOpenResume={() => setIsResumeOpen(true)}
           onOpenAiChat={() => setIsAiChatOpen(true)}
@@ -56,7 +61,6 @@ export default function App() {
         <Contact />
       </main>
 
-      {/* Footer */}
       <Footer />
 
       {/* Floating Action Trigger for AI Assistant */}
