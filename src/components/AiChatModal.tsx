@@ -13,7 +13,7 @@ export const AiChatModal: React.FC<AiChatModalProps> = ({ onClose }) => {
       id: 'welcome',
       role: 'assistant',
       content:
-        "Hello! I am Gokul M's AI Portfolio Assistant. Ask me about his AWS and DevOps skills, internships, projects, certifications, or availability.",
+        "Hello! I am the AI Portfolio Assistant. Ask me about Gokul M's AWS and DevOps skills, internships, projects, certifications, or availability.",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -112,7 +112,7 @@ export const AiChatModal: React.FC<AiChatModalProps> = ({ onClose }) => {
             </div>
             <div>
               <h3 className="font-black text-base tracking-tight flex items-center gap-1.5">
-                Ask Gokul AI <ShieldCheck className="w-4 h-4 text-sky-300" />
+                Ask AI <ShieldCheck className="w-4 h-4 text-sky-300" />
               </h3>
               <p className="text-[11px] text-sky-100 font-medium">Powered by Gemini AI Engine</p>
             </div>
