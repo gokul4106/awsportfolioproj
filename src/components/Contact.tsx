@@ -30,16 +30,23 @@ export const Contact: React.FC = () => {
         body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', subject: 'Job Opportunity / Internship', message: '' });
-      } else {
-        throw new Error('Failed to send message.');
+      const result = await res.json().catch(() => null);
+      if (!res.ok) {
+        throw new Error(
+          typeof result?.error === 'string'
+            ? result.error
+            : 'Unable to send your message. Please try again or email Gokul directly.',
+        );
       }
-    } catch (err) {
-      // Fallback UI success simulation for client SPA testing
+
       setSubmitted(true);
       setFormData({ name: '', email: '', subject: 'Job Opportunity / Internship', message: '' });
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : 'Unable to send your message. Please try again or email Gokul directly.',
+      );
     } finally {
       setSubmitting(false);
     }
@@ -160,10 +167,10 @@ export const Contact: React.FC = () => {
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h3 className="text-2xl font-black text-white tracking-tight">
-                  Message Delivered Successfully!
+                  Message Sent Successfully!
                 </h3>
                 <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                  Thank you for reaching out to Gokul M. Your message has been logged, and Gokul will respond as soon as possible.
+                  Thank you for reaching out to Gokul M. Your email has been sent, and he will respond as soon as possible.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -196,6 +203,7 @@ export const Contact: React.FC = () => {
                     </label>
                     <input
                       type="text"
+                      required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Sarah Jenkins"
@@ -209,6 +217,7 @@ export const Contact: React.FC = () => {
                     </label>
                     <input
                       type="email"
+                      required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. sarah@company.com"
@@ -239,6 +248,7 @@ export const Contact: React.FC = () => {
                   </label>
                   <textarea
                     rows={4}
+                    required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe your project, role, or technical query..."

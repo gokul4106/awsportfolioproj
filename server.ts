@@ -3,13 +3,14 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
+import nodemailer from "nodemailer";
 
 dotenv.config();
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json());
+app.use(express.json({ limit: "10kb" }));
 
 // Initialize Gemini API lazily
 let aiClient: GoogleGenAI | null = null;
@@ -139,17 +140,70 @@ app.post("/api/chat", async (req, res) => {
 });
 
 // Contact API endpoint
-app.post("/api/contact", (req, res) => {
-  const { name, email, subject, message } = req.body;
-  if (!name || !email || !message) {
+app.post("/api/contact", async (req, res) => {
+  const { name, email, subject, message } = req.body ?? {};
+  if (
+    typeof name !== "string" ||
+    typeof email !== "string" ||
+    typeof message !== "string" ||
+    !name.trim() ||
+    !email.trim() ||
+    !message.trim()
+  ) {
     res.status(400).json({ error: "Name, email, and message are required." });
     return;
   }
-  console.log(`[CONTACT FORM] From: ${name} (${email}) | Subject: ${subject}\nMessage: ${message}`);
-  res.json({
-    success: true,
-    message: "Thank you for reaching out! Gokul will get back to you shortly.",
-  });
+
+  const senderName = name.trim();
+  const senderEmail = email.trim();
+  const messageSubject = typeof subject === "string" ? subject.trim() : "";
+  const messageBody = message.trim();
+  if (
+    senderName.length > 120 ||
+    senderEmail.length > 254 ||
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(senderEmail) ||
+    messageSubject.length > 200 ||
+    messageBody.length > 5000
+  ) {
+    res.status(400).json({ error: "Please check your contact details and message length." });
+    return;
+  }
+
+  const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, CONTACT_EMAIL } = process.env;
+  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !CONTACT_EMAIL) {
+    console.error("Contact email is not configured. Set the SMTP and CONTACT_EMAIL environment variables.");
+    res.status(503).json({ error: "Email delivery is not configured yet. Please contact Gokul directly by email." });
+    return;
+  }
+
+  const port = Number(SMTP_PORT);
+  if (!Number.isInteger(port) || port < 1 || port > 65535) {
+    console.error("Contact email is not configured: SMTP_PORT must be a valid port number.");
+    res.status(503).json({ error: "Email delivery is temporarily unavailable. Please contact Gokul directly by email." });
+    return;
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port,
+      secure: SMTP_SECURE ? SMTP_SECURE.toLowerCase() === "true" : port === 465,
+      auth: { user: SMTP_USER, pass: SMTP_PASS },
+    });
+
+    await transporter.sendMail({
+      from: SMTP_USER,
+      to: CONTACT_EMAIL,
+      replyTo: { name: senderName, address: senderEmail },
+      subject: messageSubject || `Portfolio contact from ${senderName}`,
+      text: `Name: ${senderName}\nEmail: ${senderEmail}\n\n${messageBody}`,
+    });
+
+    res.json({ success: true, message: "Your message was sent to Gokul successfully." });
+  } catch (err) {
+    console.error("Contact email delivery failed:", err);
+    res.status(502).json({ error: "Unable to send your message right now. Please try again or email Gokul directly." });
+  }
 });
 
 async function start() {
